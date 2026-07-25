@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color"
+        content="#f5f7fb">
+
+    <meta name="description"
+        content="Chatly — Connect. Chat. Belong.">
+
+    <title>Chatly — Connect. Chat. Belong.</title>
+
+<link
+    rel="manifest"
+    href="manifest.json">
+
+<meta
+    name="theme-color"
+    content="#25d366">
+
+<meta
+    name="mobile-web-app-capable"
+    content="yes">
+
+<meta
+    name="apple-mobile-web-app-capable"
+    content="yes">
+    <!-- GOOGLE FONT -->
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+        href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =================================
+         EMOJI BACKGROUND
+    ================================== -->
+
+    <div class="emoji-background">
+
+        <span class="emoji">💬</span>
+        <span class="emoji">😊</span>
+        <span class="emoji">✨</span>
+        <span class="emoji">❤️</span>
+        <span class="emoji">👋</span>
+        <span class="emoji">😂</span>
+        <span class="emoji">💙</span>
+        <span class="emoji">😎</span>
+        <span class="emoji">🔥</span>
+        <span class="emoji">💭</span>
+        <span class="emoji">🤝</span>
+        <span class="emoji">🌟</span>
+        <span class="emoji">🤣</span>
+        <span class="emoji">💜</span>
+        <span class="emoji">🙌</span>
+        <span class="emoji">🎉</span>
+        <span class="emoji">😉</span>
+        <span class="emoji">💫</span>
+        <span class="emoji">🫶</span>
+        <span class="emoji">😄</span>
+        <span class="emoji">💌</span>
+        <span class="emoji">🌈</span>
+        <span class="emoji">🥳</span>
+        <span class="emoji">💙</span>
+        <span class="emoji">😇</span>
+        <span class="emoji">⭐</span>
+        <span class="emoji">🗨️</span>
+        <span class="emoji">😃</span>
+        <span class="emoji">❤️</span>
+        <span class="emoji">✌️</span>
+
+    </div>
+
+
+    <!-- =================================
+         AUTH PAGE
+    ================================== -->
+
+    <main class="auth-page">
+
+
+        <div class="auth-container">
+
+
+            <!-- BRAND -->
+
+            <div class="brand">
+
+
+                <div class="brand-logo">
+
+                    💬
+
+                </div>
+
+
+                <h1>
+
+                    Chat<span>ly</span>
+
+                </h1>
+
+
+                <p>
+
+                    Connect. Chat. Belong.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- =================================
+                 LOGIN FORM
+            ================================== -->
+
+            <section class="auth-form"
+                id="loginForm">
+
+
+                <div class="form-title">
+
+
+                    <h2>
+
+                        Welcome back
+
+                    </h2>
+
+
+                    <p>
+
+                        Login to continue your conversations.
+
+                    </p>
+
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+
+                    <label for="loginEmail">
+
+                        Email address
+
+                    </label>
+
+
+                    <div class="input-box">
+
+
+                        <span>
+
+                            ✉️
+
+                        </span>
+
+
+                        <input type="email"
+                            id="loginEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email">
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+
+                    <label for="loginPassword">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="input-box password-box">
+
+
+                        <span>
+
+                            🔒
+
+                        </span>
+
+
+                        <input type="password"
+                            id="loginPassword"
+                            placeholder="Enter your password"
+                            autocomplete="current-password">
+
+
+                        <button type="button"
+                            class="password-toggle"
+                            data-target="loginPassword">
+
+                            👁️
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- OPTIONS -->
+
+                <div class="form-options">
+
+
+                    <label class="remember">
+
+
+                        <input type="checkbox">
+
+
+                        <span>
+
+                            Remember me
+
+                        </span>
+
+
+                    </label>
+
+
+                    <button type="button"
+                        class="forgot-password"
+                        id="forgotPasswordBtn">
+
+                        Forgot password?
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- LOGIN BUTTON -->
+
+                <button type="button"
+                    class="primary-button"
+                    id="loginBtn">
+
+                    <span>
+
+                        Login to Chatly
+
+                    </span>
+
+
+                    <span class="button-arrow">
+
+                        →
+
+                    </span>
+
+
+                </button>
+
+
+                <!-- SWITCH -->
+
+                <div class="auth-switch">
+
+
+                    <span>
+
+                        Don't have an account?
+
+                    </span>
+
+
+                    <button type="button"
+                        id="showSignupBtn">
+
+                        Create account
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+            <!-- =================================
+                 SIGNUP FORM
+            ================================== -->
+
+            <section class="auth-form hidden"
+                id="signupForm">
+
+
+                <div class="form-title">
+
+
+                    <h2>
+
+                        Create your account
+
+                    </h2>
+
+
+                    <p>
+
+                        Join Chatly and start connecting.
+
+                    </p>
+
+
+                </div>
+
+
+                <!-- NAME -->
+
+                <div class="input-group">
+
+
+                    <label for="signupName">
+
+                        Full name
+
+                    </label>
+
+
+                    <div class="input-box">
+
+
+                        <span>
+
+                            👤
+
+                        </span>
+
+
+                        <input type="text"
+                            id="signupName"
+                            placeholder="Enter your full name"
+                            autocomplete="name">
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- EMAIL -->
+
+                <div class="input-group">
+
+
+                    <label for="signupEmail">
+
+                        Email address
+
+                    </label>
+
+
+                    <div class="input-box">
+
+
+                        <span>
+
+                            ✉️
+
+                        </span>
+
+
+                        <input type="email"
+                            id="signupEmail"
+                            placeholder="Enter your email"
+                            autocomplete="email">
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- PASSWORD -->
+
+                <div class="input-group">
+
+
+                    <label for="signupPassword">
+
+                        Password
+
+                    </label>
+
+
+                    <div class="input-box password-box">
+
+
+                        <span>
+
+                            🔒
+
+                        </span>
+
+
+                        <input type="password"
+                            id="signupPassword"
+                            placeholder="Create a password"
+                            autocomplete="new-password">
+
+
+                        <button type="button"
+                            class="password-toggle"
+                            data-target="signupPassword">
+
+                            👁️
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- CONFIRM PASSWORD -->
+
+                <div class="input-group">
+
+
+                    <label for="confirmPassword">
+
+                        Confirm password
+
+                    </label>
+
+
+                    <div class="input-box password-box">
+
+
+                        <span>
+
+                            🔒
+
+                        </span>
+
+
+                        <input type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm your password"
+                            autocomplete="new-password">
+
+
+                        <button type="button"
+                            class="password-toggle"
+                            data-target="confirmPassword">
+
+                            👁️
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- TERMS -->
+
+                <label class="terms">
+
+
+                    <input type="checkbox"
+                        id="termsCheckbox">
+
+
+                    <span>
+
+                        I agree to the
+
+                        <a href="#">
+
+                            Terms
+
+                        </a>
+
+                        and
+
+                        <a href="#">
+
+                            Privacy Policy
+
+                        </a>
+
+
+                    </span>
+
+
+                </label>
+
+
+                <!-- SIGNUP BUTTON -->
+
+                <button type="button"
+                    class="primary-button"
+                    id="signupBtn">
+
+                    <span>
+
+                        Create my account
+
+                    </span>
+
+
+                    <span class="button-arrow">
+
+                        →
+
+                    </span>
+
+
+                </button>
+
+
+                <!-- SWITCH -->
+
+                <div class="auth-switch">
+
+
+                    <span>
+
+                        Already have an account?
+
+                    </span>
+
+
+                    <button type="button"
+                        id="showLoginBtn">
+
+                        Login instead
+
+                    </button>
+
+
+                </div>
+
+
+            </section>
+
+
+        </div>
+
+
+    </main>
+
+
+    <!-- =================================
+         NOTIFICATION
+    ================================== -->
+
+    <div class="notification"
+        id="notification">
+
+
+        <span id="notificationIcon">
+
+            ✓
+
+        </span>
+
+
+        <span id="notificationMessage">
+
+            Message
+
+        </span>
+
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+<script type="module">
+
+import{initializeApp}from"https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+
+import{
+getAuth,
+createUserWithEmailAndPassword,
+signInWithEmailAndPassword,
+sendPasswordResetEmail,
+updateProfile
+}from"https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
+
+import{
+getFirestore,
+doc,
+setDoc,
+serverTimestamp
+}from"https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+
+/* FIREBASE */
+
+const firebaseConfig={
+
+apiKey:"AIzaSyCGPc4Owu1YsZRVC2y3jxVKtoQMTGF4Mw8",
+
+authDomain:"chatly-6aae9.firebaseapp.com",
+
+projectId:"chatly-6aae9",
+
+storageBucket:"chatly-6aae9.firebasestorage.app",
+
+messagingSenderId:"813559863473",
+
+appId:"1:813559863473:web:142f0697d843bfab2a2a90",
+
+measurementId:"G-G6GXDGFC1C"
+
+};
+
+
+const app=initializeApp(firebaseConfig);
+
+const auth=getAuth(app);
+
+const db=getFirestore(app);
+
+
+/* ELEMENTS */
+
+const loginForm=document.getElementById("loginForm");
+
+const signupForm=document.getElementById("signupForm");
+
+const showSignupBtn=document.getElementById("showSignupBtn");
+
+const showLoginBtn=document.getElementById("showLoginBtn");
+
+const loginBtn=document.getElementById("loginBtn");
+
+const signupBtn=document.getElementById("signupBtn");
+
+const forgotPasswordBtn=document.getElementById("forgotPasswordBtn");
+
+const notification=document.getElementById("notification");
+
+const notificationIcon=document.getElementById("notificationIcon");
+
+const notificationMessage=document.getElementById("notificationMessage");
+
+
+/* MESSAGE */
+
+function showMessage(message,type="success"){
+
+notificationMessage.textContent=message;
+
+notificationIcon.textContent=
+type==="error"?"✕":"✓";
+
+notification.classList.add("show");
+
+setTimeout(()=>{
+
+notification.classList.remove("show");
+
+},3500);
+
+}
+
+
+/* WELCOME */
+
+window.addEventListener("load",()=>{
+
+setTimeout(()=>{
+
+showMessage("Welcome to Chatly 👋");
+
+},500);
+
+});
+
+
+/* SHOW SIGNUP */
+
+showSignupBtn.addEventListener("click",()=>{
+
+loginForm.classList.add("hidden");
+
+signupForm.classList.remove("hidden");
+
+});
+
+
+/* SHOW LOGIN */
+
+showLoginBtn.addEventListener("click",()=>{
+
+signupForm.classList.add("hidden");
+
+loginForm.classList.remove("hidden");
+
+});
+
+
+/* PASSWORD SHOW/HIDE */
+
+document.querySelectorAll(".password-toggle").forEach(button=>{
+
+button.addEventListener("click",()=>{
+
+const input=document.getElementById(
+button.dataset.target
+);
+
+if(input.type==="password"){
+
+input.type="text";
+
+button.textContent="🙈";
+
+}else{
+
+input.type="password";
+
+button.textContent="👁️";
+
+}
+
+});
+
+});
+
+
+/* LOGIN */
+
+loginBtn.addEventListener("click",async()=>{
+
+const email=document
+.getElementById("loginEmail")
+.value
+.trim();
+
+const password=document
+.getElementById("loginPassword")
+.value;
+
+
+if(!email||!password){
+
+showMessage(
+"Please enter your email and password.",
+"error"
+);
+
+return;
+
+}
+
+
+loginBtn.disabled=true;
+
+loginBtn.innerHTML="Logging in...";
+
+
+try{
+
+await signInWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+
+showMessage(
+"Login successful. Welcome back! 👋"
+);
+
+
+loginBtn.innerHTML="Login successful ✓";
+
+
+/*
+  HOME LATER ADD KARENGE
+*/
+window.location.href = "home.html";
+}catch(error){
+
+console.error(error);
+
+showMessage(
+"Email or password is incorrect.",
+"error"
+);
+
+loginBtn.disabled=false;
+
+loginBtn.innerHTML=
+"<span>Login to Chatly</span>"+
+"<span class='button-arrow'>→</span>";
+
+}
+
+});
+
+
+/* CREATE ACCOUNT */
+
+signupBtn.addEventListener("click",async()=>{
+
+const name=document
+.getElementById("signupName")
+.value
+.trim();
+
+const email=document
+.getElementById("signupEmail")
+.value
+.trim();
+
+const password=document
+.getElementById("signupPassword")
+.value;
+
+const confirmPassword=document
+.getElementById("confirmPassword")
+.value;
+
+const terms=document
+.getElementById("termsCheckbox")
+.checked;
+
+
+if(!name||!email||!password||!confirmPassword){
+
+showMessage(
+"Please complete all fields.",
+"error"
+);
+
+return;
+
+}
+
+
+if(password.length<6){
+
+showMessage(
+"Password must be at least 6 characters.",
+"error"
+);
+
+return;
+
+}
+
+
+if(password!==confirmPassword){
+
+showMessage(
+"Passwords do not match.",
+"error"
+);
+
+return;
+
+}
+
+
+if(!terms){
+
+showMessage(
+"Please accept the Terms and Privacy Policy.",
+"error"
+);
+
+return;
+
+}
+
+
+signupBtn.disabled=true;
+
+signupBtn.innerHTML="Creating account...";
+
+
+try{
+
+const result=
+await createUserWithEmailAndPassword(
+auth,
+email,
+password
+);
+
+const user=result.user;
+
+
+await updateProfile(
+user,
+{
+displayName:name
+}
+);
+
+
+await setDoc(
+doc(db,"users",user.uid),
+{
+
+uid:user.uid,
+
+name:name,
+
+email:email,
+
+bio:"No bio added yet.",
+
+photoURL:"",
+
+createdAt:serverTimestamp()
+
+}
+);
+
+
+/* ACCOUNT CREATED */
+
+showMessage(
+"Account created successfully! 🎉"
+);
+
+
+setTimeout(()=>{
+
+/*
+  SIGNUP HIDE
+*/
+
+signupForm.classList.add("hidden");
+
+
+/*
+  LOGIN SHOW
+*/
+
+loginForm.classList.remove("hidden");
+
+
+/*
+  EMAIL AUTOMATICALLY FILL
+*/
+
+document
+.getElementById("loginEmail")
+.value=email;
+
+
+/*
+  PASSWORD EMPTY
+
+*/
+
+document
+.getElementById("loginPassword")
+.value="";
+
+
+/*
+  BUTTON RESET
+
+*/
+
+signupBtn.disabled=false;
+
+signupBtn.innerHTML=
+"<span>Create my account</span>"+
+"<span class='button-arrow'>→</span>";
+
+
+showMessage(
+"Your account is ready. Please login 👋"
+);
+
+},1200);
+
+
+}catch(error){
+
+console.error(error);
+
+
+let message=
+"Account creation failed.";
+
+
+if(error.code==="auth/email-already-in-use"){
+
+message=
+"This email is already registered.";
+
+}
+
+else if(error.code==="auth/invalid-email"){
+
+message=
+"Please enter a valid email address.";
+
+}
+
+else if(error.code==="auth/weak-password"){
+
+message=
+"Password must be at least 6 characters.";
+
+}
+
+
+showMessage(
+message,
+"error"
+);
+
+
+signupBtn.disabled=false;
+
+signupBtn.innerHTML=
+"<span>Create my account</span>"+
+"<span class='button-arrow'>→</span>";
+
+}
+
+});
+
+
+/* FORGOT PASSWORD */
+
+forgotPasswordBtn.addEventListener(
+"click",
+async()=>{
+
+const email=document
+.getElementById("loginEmail")
+.value
+.trim();
+
+
+if(!email){
+
+showMessage(
+"Enter your email first.",
+"error"
+);
+
+return;
+
+}
+
+
+try{
+
+await sendPasswordResetEmail(
+auth,
+email
+);
+
+
+showMessage(
+"Password reset email sent 📩"
+);
+
+
+}catch(error){
+
+console.error(error);
+
+
+showMessage(
+"Unable to send reset email.",
+"error"
+);
+
+}
+
+});
+
+
+if ("serviceWorker" in navigator) {
+
+    window.addEventListener("load", () => {
+
+        navigator.serviceWorker.register(
+            "service-worker.js"
+        );
+
+    });
+
+}
+</script>
+</body>
+</html>

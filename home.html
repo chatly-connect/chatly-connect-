@@ -1,0 +1,3362 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<meta name="theme-color"
+    content="#0b1220">
+
+<title>Chatly — Home</title>
+<link rel="manifest" href="manifest.json">
+
+<meta name="theme-color" content="#25d366">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet"
+    href="home.css">
+
+</head><body><!--
+
+==
+
+========================================= -->
+
+<div class="emoji-background">
+
+        <span class="emoji">💬</span>
+        <span class="emoji">😊</span>
+        <span class="emoji">✨</span>
+        <span class="emoji">❤️</span>
+        <span class="emoji">👋</span>
+        <span class="emoji">😂</span>
+        <span class="emoji">💙</span>
+        <span class="emoji">😎</span>
+        <span class="emoji">🔥</span>
+        <span class="emoji">💭</span>
+        <span class="emoji">🤝</span>
+        <span class="emoji">🌟</span>
+        <span class="emoji">🤣</span>
+        <span class="emoji">💜</span>
+        <span class="emoji">🙌</span>
+        <span class="emoji">🎉</span>
+        <span class="emoji">😉</span>
+        <span class="emoji">💫</span>
+        <span class="emoji">🫶</span>
+        <span class="emoji">😄</span>
+        <span class="emoji">💌</span>
+        <span class="emoji">🌈</span>
+        <span class="emoji">🥳</span>
+        <span class="emoji">💙</span>
+        <span class="emoji">😇</span>
+        <span class="emoji">⭐</span>
+        <span class="emoji">🗨️</span>
+        <span class="emoji">😃</span>
+        <span class="emoji">❤️</span>
+        <span class="emoji">✌️</span>
+
+    </div>
+<button id="installAppButton">
+    📲 Install App
+</button>
+<main class="chatly-app"><!-- =====================================
+     TOP HEADER
+====================================== -->
+
+<header class="home-header">
+
+
+    <!-- LEFT -->
+
+    <div class="header-left">
+
+        <p class="welcome-small">
+
+            YOUR SPACE TO CONNECT ✨
+
+        </p>
+
+
+        <h1>
+
+            Hey,
+
+            <span id="homeUserName">
+
+                User
+
+            </span>
+
+            👋
+
+        </h1>
+
+    </div>
+
+
+    <!-- RIGHT -->
+
+    <div class="header-right">
+
+
+        <!-- DARK / LIGHT MODE -->
+
+        <button
+            class="theme-toggle"
+            id="themeToggleBtn"
+            aria-label="Toggle theme">
+
+            <span id="themeIcon">
+
+                🌙
+
+            </span>
+
+        </button>
+
+
+        <!-- MENU -->
+
+        <button
+            class="menu-button"
+            id="menuButton">
+
+            <span></span>
+
+            <span></span>
+
+            <span></span>
+
+        </button>
+
+
+        <!-- MENU DROPDOWN -->
+
+        <div
+            class="header-menu"
+            id="headerMenu">
+
+
+            <button
+                id="profileBtn">
+
+                <span>
+
+                    👤
+
+                </span>
+
+                <span>
+
+                    Profile
+
+                </span>
+
+            </button>
+
+
+            <button
+                id="settingsBtn">
+
+                <span>
+
+                    ⚙️
+
+                </span>
+
+                <span>
+
+                    Settings
+
+                </span>
+
+            </button>
+
+
+            <button
+                id="logoutBtn">
+
+                <span>
+
+                    🚪
+
+                </span>
+
+                <span>
+
+                    Logout
+
+                </span>
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</header>
+
+
+<!-- =====================================
+     CHAT AREA
+====================================== -->
+
+<section class="chat-area">
+
+
+    <!-- CHAT HEADER -->
+
+    <div class="chat-heading">
+
+
+        <div>
+
+            <h2>
+
+                Your Chats
+
+            </h2>
+
+
+            <p
+                id="chatCount">
+
+                No conversations yet
+
+            </p>
+
+        </div>
+
+
+        <!-- ADD CHAT -->
+
+        <button
+            class="add-chat-button"
+            id="addChatButton">
+
+
+            <span>
+
+                +
+
+            </span>
+
+
+            <span>
+
+                Add Chat
+
+            </span>
+
+
+        </button>
+
+
+    </div>
+
+
+    <!-- SEARCH -->
+
+    <div
+        class="chat-search">
+
+
+        <span>
+
+            🔍
+
+        </span>
+
+
+        <input
+            type="search"
+            id="chatSearchInput"
+            placeholder="Search your chats...">
+
+
+    </div>
+
+
+    <!-- CHAT LIST -->
+
+    <div
+        class="chat-list"
+        id="chatList">
+
+
+        <!-- EMPTY STATE -->
+
+        <div
+            class="empty-chat"
+            id="emptyChat">
+
+
+            <div
+                class="empty-chat-icon">
+
+                💬
+
+            </div>
+
+
+            <h3>
+
+                No chats yet
+
+            </h3>
+
+
+            <p>
+
+                Add someone and start a conversation.
+
+            </p>
+
+
+            <button
+                id="emptyAddChatButton">
+
+                Add your first chat
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+</main><!-- =========================================
+     ADD CHAT MODAL
+========================================= --><div
+    class="modal-overlay"
+    id="addChatModal"><div
+    class="modal-box">
+
+
+    <button
+        class="modal-close"
+        id="closeAddChatModal">
+
+        ×
+
+    </button>
+
+
+    <div
+        class="modal-icon">
+
+        💬
+
+    </div>
+
+
+    <h2>
+
+        Add New Chat
+
+    </h2>
+
+
+    <p>
+
+        Add a Chatly user to start chatting.
+
+    </p>
+
+
+    <!-- NAME -->
+
+    <label>
+
+        User Name
+
+    </label>
+
+
+    <input
+        type="text"
+        id="newChatName"
+        placeholder="Enter user's name">
+
+
+    <!-- EMAIL -->
+
+    <label>
+
+        Email Address
+
+    </label>
+
+
+    <input
+        type="email"
+        id="newChatEmail"
+        placeholder="Enter user's email">
+
+
+    <button
+        class="modal-primary-button"
+        id="saveNewChatButton">
+
+        Add to Chats
+
+    </button>
+
+
+</div>
+
+</div><!-- =========================================
+     CHAT WINDOW
+========================================= --><div
+    class="chat-window"
+    id="chatWindow"><!-- CHAT HEADER -->
+
+<header
+    class="conversation-header">
+
+
+    <button
+        class="back-button"
+        id="backToChatsButton">
+
+        ←
+
+    </button>
+
+
+    <div
+        class="conversation-avatar"
+        id="conversationAvatar">
+
+        U
+
+    </div>
+
+
+    <div
+        class="conversation-user-info">
+
+
+        <h2
+            id="conversationUserName">
+
+            User
+
+        </h2>
+
+
+        <p
+            id="conversationUserEmail">
+
+            user@email.com
+
+        </p>
+
+<span id="typingIndicator">
+    typing<span class="typing-dots">...</span>
+</span>
+
+    </div>
+
+
+    <button
+        class="conversation-menu-button"
+        id="conversationMenuButton">
+
+        ⋮
+
+    </button>
+
+
+</header>
+
+
+<!-- MESSAGES -->
+
+<div
+    class="messages-area"
+    id="messagesArea">
+
+
+    <div
+        class="conversation-empty"
+        id="conversationEmpty">
+
+
+        <div>
+
+            ✨
+
+        </div>
+
+
+        <h3>
+
+            Start a conversation
+
+        </h3>
+
+
+        <p>
+
+            Send your first message.
+
+        </p>
+
+
+    </div>
+
+
+</div>
+
+<div id="typingBubble">
+
+    <span></span>
+    <span></span>
+    <span></span>
+
+</div>
+<!-- MESSAGE INPUT -->
+
+<div
+    class="message-composer">
+
+
+    <button
+        class="emoji-button"
+        id="emojiButton">
+
+        😊
+
+    </button>
+
+
+    <textarea
+        id="messageInput"
+        placeholder="Write a message..."
+        rows="1"></textarea>
+
+
+    <button
+        class="send-button"
+        id="sendMessageButton">
+
+        ➤
+
+    </button>
+
+
+</div>
+
+</div><!-- =========================================
+     CHAT OPTIONS
+========================================= --><div
+    class="chat-options-menu"
+    id="chatOptionsMenu"><button
+    id="deleteChatButton">
+
+    🗑️ Delete Chat
+
+</button>
+<!-- =========================================
+     PROFILE MODAL
+========================================= -->
+
+<div
+    class="modal-overlay"
+    id="profileModal">
+
+    <div
+        class="modal-box profile-box">
+
+
+        <button
+            class="modal-close"
+            id="closeProfileModal">
+
+            ×
+
+        </button>
+
+
+        <div
+            class="profile-avatar"
+            id="profileAvatar">
+
+            U
+
+        </div>
+
+
+        <h2
+            id="profileUserName">
+
+            User
+
+        </h2>
+
+
+        <p
+            id="profileUserEmail">
+
+            user@email.com
+
+        </p>
+
+
+        <div
+            class="profile-bio">
+
+            <span>Bio</span>
+
+            <p
+                id="profileBio">
+
+                No bio added yet.
+
+            </p>
+
+        </div>
+
+
+        <button
+            id="editProfileButton">
+
+            Edit Profile
+
+        </button>
+
+
+        <!-- EDIT PROFILE FORM -->
+
+        <div
+            id="profileEditBox"
+            class="profile-edit-box">
+
+
+            <input
+                type="text"
+                id="editNameInput"
+                placeholder="Enter your name">
+
+
+            <textarea
+                id="editBioInput"
+                placeholder="Write your bio"></textarea>
+
+
+            <input
+                type="file"
+                id="editProfileImage"
+                accept="image/*">
+
+
+            <button
+                id="saveProfileButton">
+
+                Save Changes
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+<!-- =========================================
+     SETTINGS MODAL
+========================================= --><div
+    class="modal-overlay"
+    id="settingsModal"><div
+    class="modal-box settings-box">
+
+
+    <button
+        class="modal-close"
+        id="closeSettingsModal">
+
+        ×
+
+    </button>
+
+
+    <h2>
+
+        Settings
+
+    </h2>
+
+
+    <p>
+
+        Customize your Chatly experience.
+
+    </p>
+
+
+    <div
+        class="setting-item">
+
+
+        <div>
+
+            <strong>
+
+                Notifications
+
+            </strong>
+
+
+            <span>
+
+                Receive message notifications
+
+            </span>
+
+        </div>
+
+
+        <label
+            class="switch">
+
+
+            <input
+                type="checkbox"
+                checked>
+
+
+            <span></span>
+
+
+        </label>
+
+
+    </div>
+
+
+    <div
+        class="setting-item">
+
+
+        <div>
+
+            <strong>
+
+                Online Status
+
+            </strong>
+
+
+            <span>
+
+                Show your online status
+
+            </span>
+
+        </div>
+
+
+        <label
+            class="switch">
+
+
+            <input
+                type="checkbox"
+                checked>
+
+
+            <span></span>
+
+
+        </label>
+
+
+    </div>
+
+
+</div>
+
+</div><!-- =========================================
+     NOTIFICATION
+========================================= --><div
+    class="notification"
+    id="notification"><span
+    id="notificationText">
+
+    Success
+
+</span>
+
+</div>
+<script type="module">
+
+/* =========================================
+   CHATLY HOME SYSTEM
+   SHARED CHAT SYSTEM
+========================================= */
+
+
+/* =========================================
+   FIREBASE IMPORTS
+========================================= */
+
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-app.js";
+
+
+import {
+    getAuth,
+    onAuthStateChanged,
+    signOut
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
+
+
+import {
+    getFirestore,
+    collection,
+    query,
+    where,
+    getDocs,
+    getDoc,
+    addDoc,
+    setDoc,
+    doc,
+    deleteDoc,
+    onSnapshot,
+    serverTimestamp,
+    orderBy
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-firestore.js";
+
+import {
+    getStorage,
+    ref,
+    uploadBytes,
+    getDownloadURL
+} from "https://www.gstatic.com/firebasejs/12.16.0/firebase-storage.js";
+/* =========================================
+   FIREBASE CONFIG
+========================================= */
+
+const firebaseConfig = {
+
+    apiKey:
+    "AIzaSyCGPc4Owu1YsZRVC2y3jxVKtoQMTGF4Mw8",
+
+    authDomain:
+    "chatly-6aae9.firebaseapp.com",
+
+    projectId:
+    "chatly-6aae9",
+
+    storageBucket:
+    "chatly-6aae9.firebasestorage.app",
+
+    messagingSenderId:
+    "813559863473",
+
+    appId:
+    "1:813559863473:web:142f0697d843bfab2a2a90",
+
+    measurementId:
+    "G-G6GXDGFC1C"
+
+};
+
+
+const app = initializeApp(firebaseConfig);
+
+const auth = getAuth(app);
+
+const db = getFirestore(app);
+
+const storage = getStorage(app);
+/* =========================================
+   VARIABLES
+========================================= */
+
+let currentUser = null;
+
+let selectedUser = null;
+
+let selectedConversationId = null;
+
+let unsubscribeMessages = null;
+
+
+/* =========================================
+   SHORT ELEMENT FUNCTION
+========================================= */
+
+const $ = id => document.getElementById(id);
+
+
+/* =========================================
+   NOTIFICATION
+========================================= */
+
+function showNotification(message) {
+
+    const notification = $("notification");
+
+    const text = $("notificationText");
+
+
+    if (text) {
+
+        text.textContent = message;
+
+    }
+
+
+    if (notification) {
+
+        notification.classList.add("show");
+
+
+        setTimeout(() => {
+
+            notification.classList.remove("show");
+
+        }, 2500);
+
+    }
+
+}
+
+
+/* =========================================
+   ESCAPE HTML
+========================================= */
+
+function escapeHTML(text) {
+
+    return String(text || "")
+
+        .replace(/&/g, "&amp;")
+
+        .replace(/</g, "&lt;")
+
+        .replace(/>/g, "&gt;")
+
+        .replace(/"/g, "&quot;")
+
+        .replace(/'/g, "&#039;");
+
+}
+
+
+/* =========================================
+   INITIAL
+========================================= */
+
+function getInitial(name) {
+
+    return String(name || "U")
+
+        .charAt(0)
+
+        .toUpperCase();
+
+}
+function formatTime(timestamp) {
+
+    if (!timestamp) return "";
+
+    let date;
+
+    if (typeof timestamp === "number") {
+
+        date = new Date(timestamp);
+
+    }
+
+    else if (timestamp.toDate) {
+
+        date = timestamp.toDate();
+
+    }
+
+    else {
+
+        date = new Date(timestamp);
+
+    }
+
+    return date.toLocaleTimeString([], {
+
+        hour: "2-digit",
+
+        minute: "2-digit"
+
+    });
+
+}
+
+
+/* =========================================
+   CONVERSATION ID
+========================================= */
+
+function createConversationId(uid1, uid2) {
+
+    return [uid1, uid2]
+
+        .sort()
+
+        .join("_");
+
+}
+
+
+/* =========================================
+   AUTH CHECK
+========================================= */
+
+onAuthStateChanged(auth, async user => {
+
+
+    if (!user) {
+
+        window.location.href = "index.html";
+
+        return;
+
+    }
+
+
+    currentUser = user;
+
+await loadCurrentUser();
+
+await loadChats();
+
+});
+/* =========================================
+   LOAD CURRENT USER
+========================================= */
+
+async function loadCurrentUser() {
+
+
+    const userRef = doc(
+
+        db,
+
+        "users",
+
+        currentUser.uid
+
+    );
+
+
+    const userSnap = await getDoc(userRef);
+
+
+    let userData = {};
+
+
+    if (userSnap.exists()) {
+
+        userData = userSnap.data();
+
+    }
+
+
+    const name =
+
+        userData.name ||
+
+        currentUser.displayName ||
+
+        currentUser.email.split("@")[0];
+
+
+    const email = currentUser.email;
+
+
+    if ($("homeUserName")) {
+
+        $("homeUserName").textContent = name;
+
+    }
+
+
+    if ($("profileUserName")) {
+
+        $("profileUserName").textContent = name;
+
+    }
+
+
+    if ($("profileUserEmail")) {
+
+        $("profileUserEmail").textContent = email;
+
+    }
+
+
+    if ($("profileAvatar")) {
+
+    if (userData.photoURL) {
+
+        $("profileAvatar").innerHTML = `
+
+            <img
+                src="${userData.photoURL}"
+                alt="Profile">
+
+        `;
+
+    }
+
+    else {
+
+        $("profileAvatar").textContent =
+            getInitial(name);
+
+    }
+
+}
+
+}
+
+
+/* =========================================
+   OPEN ADD CHAT
+========================================= */
+
+function openAddChat() {
+
+    $("addChatModal")?.classList.add("show");
+
+}
+
+
+/* =========================================
+   CLOSE ADD CHAT
+========================================= */
+
+function closeAddChat() {
+
+
+    $("addChatModal")?.classList.remove("show");
+
+
+    if ($("newChatName")) {
+
+        $("newChatName").value = "";
+
+    }
+
+
+    if ($("newChatEmail")) {
+
+        $("newChatEmail").value = "";
+
+    }
+
+}
+
+
+$("addChatButton")
+
+    ?.addEventListener(
+
+        "click",
+
+        openAddChat
+
+    );
+
+
+$("emptyAddChatButton")
+
+    ?.addEventListener(
+
+        "click",
+
+        openAddChat
+
+    );
+
+
+$("closeAddChatModal")
+
+    ?.addEventListener(
+
+        "click",
+
+        closeAddChat
+
+    );
+
+
+/* =========================================
+   CREATE / FIND CHAT
+========================================= */
+
+$("saveNewChatButton")
+
+    ?.addEventListener(
+
+        "click",
+
+        async () => {
+
+
+            const name =
+
+                $("newChatName")
+
+                ?.value
+
+                .trim();
+
+
+            const email =
+
+                $("newChatEmail")
+
+                ?.value
+
+                .trim()
+
+                .toLowerCase();
+
+
+            if (!name || !email) {
+
+                showNotification(
+
+                    "Please enter name and email"
+
+                );
+
+                return;
+
+            }
+
+
+            if (
+
+                email ===
+
+                currentUser.email.toLowerCase()
+
+            ) {
+
+                showNotification(
+
+                    "You cannot add yourself"
+
+                );
+
+                return;
+
+            }
+
+
+            try {
+
+
+                const usersRef = collection(
+
+                    db,
+
+                    "users"
+
+                );
+
+
+                const userQuery = query(
+
+                    usersRef,
+
+                    where(
+
+                        "email",
+
+                        "==",
+
+                        email
+
+                    )
+
+                );
+
+
+                const result =
+
+                    await getDocs(
+
+                        userQuery
+
+                    );
+
+
+                if (result.empty) {
+
+                    showNotification(
+
+                        "User is not registered"
+
+                    );
+
+                    return;
+
+                }
+
+
+                const otherUserDoc =
+
+                    result.docs[0];
+
+
+                const otherUser = {
+
+
+                    uid:
+
+                        otherUserDoc.id,
+
+
+                    name:
+
+                        otherUserDoc.data().name ||
+
+                        name,
+
+
+                    email:
+
+                        email
+
+                };
+
+
+                const conversationId =
+
+                    createConversationId(
+
+                        currentUser.uid,
+
+                        otherUser.uid
+
+                    );
+
+
+                const conversationRef = doc(
+
+                    db,
+
+                    "conversations",
+
+                    conversationId
+
+                );
+
+
+                const conversationSnap =
+
+                    await getDoc(
+
+                        conversationRef
+
+                    );
+
+
+                if (
+
+                    !conversationSnap.exists()
+
+                ) {
+
+
+                    await setDoc(
+
+                        conversationRef,
+
+                        {
+
+
+                            members: [
+
+                                currentUser.uid,
+
+                                otherUser.uid
+
+                            ],
+
+
+                            memberInfo: {
+
+
+                                [currentUser.uid]: {
+
+                                    name:
+
+                                        currentUser.email
+
+                                        .split("@")[0],
+
+                                    email:
+
+                                        currentUser.email
+
+                                },
+
+
+                                [otherUser.uid]: {
+
+                                    name:
+
+                                        otherUser.name,
+
+                                    email:
+
+                                        otherUser.email
+
+                                }
+
+                            },
+
+
+                            lastMessage: "",
+
+
+                            createdAt:
+
+                                serverTimestamp()
+
+
+                        }
+
+                    );
+
+                }
+
+
+                showNotification(
+
+                    "Chat ready"
+
+                );
+
+
+                closeAddChat();
+
+
+                await loadChats();
+
+
+            }
+
+
+            catch (error) {
+
+
+                console.error(error);
+
+
+                showNotification(
+
+                    error.message
+
+                );
+
+            }
+
+        }
+
+    );
+
+
+/* =========================================
+   LOAD ALL USER CHATS
+========================================= */
+
+async function loadChats() {
+
+    const chatList = $("chatList");
+
+    if (!chatList) return;
+
+    const conversationsRef = collection(
+        db,
+        "conversations"
+    );
+
+    const chatQuery = query(
+        conversationsRef,
+        where(
+            "members",
+            "array-contains",
+            currentUser.uid
+        )
+    );
+
+    onSnapshot(chatQuery, (snapshot) => {
+
+        chatList.innerHTML = "";
+
+        if (snapshot.empty) {
+
+            chatList.innerHTML = `
+                <div class="empty-chat">
+
+                    <div class="empty-chat-icon">💬</div>
+
+                    <h3>No chats yet</h3>
+
+                    <p>Add someone and start chatting.</p>
+
+                    <button id="emptyAddChatButton">
+                        Add your first chat
+                    </button>
+
+                </div>
+            `;
+
+            $("emptyAddChatButton")
+            ?.addEventListener(
+                "click",
+                openAddChat
+            );
+
+            if ($("chatCount")) {
+
+                $("chatCount").textContent =
+                "No conversations yet";
+
+            }
+
+            return;
+
+        }
+
+        if ($("chatCount")) {
+
+            $("chatCount").textContent =
+            snapshot.size +
+            " conversation" +
+            (snapshot.size === 1 ? "" : "s");
+
+        }
+        const conversations = snapshot.docs.sort((a, b) => {
+
+    const timeA =
+        a.data().lastMessageAt?.toMillis?.() || 0;
+
+    const timeB =
+        b.data().lastMessageAt?.toMillis?.() || 0;
+
+    return timeB - timeA;
+
+});
+        conversations.forEach((conversationDoc) => {
+
+            const conversation =
+            conversationDoc.data();
+     
+            const otherUid =
+            conversation.members.find(
+                uid => uid !== currentUser.uid
+            );
+
+            const otherInfo =
+            conversation.memberInfo[otherUid];
+
+            const item =
+            document.createElement("div");
+
+            item.className = "chat-item";
+
+            item.innerHTML = `
+
+    <div class="chat-avatar">
+
+        ${getInitial(otherInfo.name)}
+
+    </div>
+
+
+    <div class="chat-info">
+
+        <h3>
+
+            ${escapeHTML(otherInfo.name)}
+
+        </h3>
+
+
+        <p>
+
+            ${escapeHTML(
+
+                conversation.lastMessage ||
+
+                "Start a conversation"
+
+            )}
+
+        </p>
+
+    </div>
+
+
+    <div class="chat-right">
+
+        ${
+            (conversation.unreadCount?.[currentUser.uid] || 0) > 0
+
+                ? `
+
+                    <span class="unread-count">
+
+                        ${conversation.unreadCount[currentUser.uid]}
+
+                    </span>
+
+                  `
+
+                : ""
+
+        }
+
+
+        <button class="chat-delete">
+
+            🗑️
+
+        </button>
+
+    </div>
+
+`;
+
+            item.addEventListener("click", (event) => {
+
+                if (event.target.closest(".chat-delete")) return;
+
+                openChat(
+                    conversationDoc.id,
+                    otherUid,
+                    otherInfo
+                );
+
+            });
+
+            item.querySelector(".chat-delete")
+            ?.addEventListener("click", async (event) => {
+
+                event.stopPropagation();
+
+                if (!confirm("Delete this chat?")) return;
+
+                await deleteDoc(
+                    doc(
+                        db,
+                        "conversations",
+                        conversationDoc.id
+                    )
+                );
+
+                showNotification("Chat deleted");
+
+            });
+
+            chatList.appendChild(item);
+
+        });
+
+    });
+
+}
+/* =========================================
+   OPEN CHAT
+========================================= */
+
+async function openChat(
+
+    conversationId,
+
+    otherUid,
+
+    otherInfo
+
+) {
+
+
+    selectedConversationId =
+
+        conversationId;
+
+
+    selectedUser = {
+
+
+        uid: otherUid,
+
+
+        ...otherInfo
+
+    };
+
+
+    if ($("conversationUserName")) {
+
+        $("conversationUserName")
+
+            .textContent =
+
+            otherInfo.name;
+
+    }
+
+
+    if ($("conversationUserEmail")) {
+
+        $("conversationUserEmail")
+
+            .textContent =
+
+            otherInfo.email;
+
+    }
+
+
+    if ($("conversationAvatar")) {
+
+        $("conversationAvatar")
+
+            .textContent =
+
+            getInitial(
+
+                otherInfo.name
+
+            );
+
+    }
+
+
+    $("chatWindow")
+
+        ?.classList.add("show");
+
+const conversationRef = doc(
+    db,
+    "conversations",
+    conversationId
+);
+
+const conversationSnap =
+    await getDoc(conversationRef);
+
+const conversationData =
+    conversationSnap.data();
+
+const unreadCount =
+    conversationData.unreadCount || {};
+
+unreadCount[currentUser.uid] = 0;
+
+await setDoc(
+    conversationRef,
+    {
+        unreadCount: unreadCount
+    },
+    {
+        merge: true
+    }
+);
+listenToTyping(otherUid);
+    await listenToMessages();
+
+}
+/* =========================================
+   LISTEN TO OTHER USER TYPING
+========================================= */
+
+let unsubscribeTyping = null;
+
+
+function listenToTyping(otherUid) {
+
+
+    if (unsubscribeTyping) {
+
+        unsubscribeTyping();
+
+        unsubscribeTyping = null;
+
+    }
+
+
+    const conversationRef = doc(
+
+        db,
+
+        "conversations",
+
+        selectedConversationId
+
+    );
+
+
+    unsubscribeTyping = onSnapshot(
+
+        conversationRef,
+
+        snapshot => {
+
+
+            const data =
+
+                snapshot.data();
+
+
+            const isTyping =
+
+                data?.typing?.[otherUid] === true;
+
+
+            $("typingIndicator")
+
+                ?.classList.toggle(
+
+                    "show",
+
+                    isTyping
+
+                );
+
+
+            $("typingBubble")
+
+                ?.classList.toggle(
+
+                    "show",
+
+                    isTyping
+
+                );
+
+        }
+
+    );
+
+}
+/* =========================================
+   LIVE MESSAGES
+========================================= */
+
+async function listenToMessages() {
+
+    if (unsubscribeMessages) {
+
+        unsubscribeMessages();
+
+        unsubscribeMessages = null;
+
+    }
+
+
+    if (!selectedConversationId) return;
+
+
+    const messagesArea = $("messagesArea");
+
+    if (!messagesArea) return;
+
+
+    const messagesRef = collection(
+
+        db,
+
+        "conversations",
+
+        selectedConversationId,
+
+        "messages"
+
+    );
+
+
+    const messagesQuery = query(
+
+        messagesRef,
+
+        orderBy("createdAt", "asc")
+
+    );
+
+
+    unsubscribeMessages = onSnapshot(
+
+        messagesQuery,
+
+        async snapshot => {
+
+
+            messagesArea.innerHTML = "";
+
+
+            if (snapshot.empty) {
+
+                messagesArea.innerHTML = `
+
+                <div class="conversation-empty">
+
+                    <div>✨</div>
+
+                    <h3>Start a conversation</h3>
+
+                    <p>Send your first message.</p>
+
+                </div>
+
+                `;
+
+                return;
+
+            }
+
+
+            const updatePromises = [];
+
+
+            snapshot.forEach(messageDoc => {
+
+
+                const message = messageDoc.data();
+
+          if (
+
+    message.senderId !== currentUser.uid &&
+
+    message.status !== "read"
+
+) {
+
+    $("receiveSound")
+        ?.play()
+        .catch(() => {});
+
+}
+                /*
+                =================================
+                RECEIVED MESSAGE → READ
+                =================================
+                */
+
+
+                if (
+
+                    message.senderId !== currentUser.uid &&
+
+                    message.status !== "read"
+
+                ) {
+
+
+                    updatePromises.push(
+
+                        setDoc(
+
+                            doc(
+
+                                db,
+
+                                "conversations",
+
+                                selectedConversationId,
+
+                                "messages",
+
+                                messageDoc.id
+
+                            ),
+
+                            {
+
+                                status: "read"
+
+                            },
+
+                            {
+
+                                merge: true
+
+                            }
+
+                        )
+
+                    );
+
+                }
+
+
+                /*
+                =================================
+                MESSAGE DESIGN
+                =================================
+                */
+
+
+                const wrapper = document.createElement("div");
+
+
+                wrapper.className =
+
+                    message.senderId === currentUser.uid
+
+                        ? "message sent"
+
+                        : "message received";
+
+
+                /*
+                =================================
+                TICK SYSTEM
+                =================================
+                */
+
+
+                let tick = "";
+
+                let tickClass = "";
+
+
+                if (
+
+                    message.senderId === currentUser.uid
+
+                ) {
+
+
+                    if (
+
+                        message.status === "read"
+
+                    ) {
+
+                        tick = "✓✓";
+
+                        tickClass = "read";
+
+                    }
+
+
+                    else if (
+
+                        message.status === "delivered"
+
+                    ) {
+
+                        tick = "✓✓";
+
+                        tickClass = "delivered";
+
+                    }
+
+
+                    else {
+
+                        tick = "✓";
+
+                        tickClass = "sent";
+
+                    }
+
+                }
+
+
+                /*
+                =================================
+                MESSAGE HTML
+                =================================
+                */
+
+
+            wrapper.innerHTML = `
+
+    <div class="message-bubble">
+
+        <span class="message-text">
+
+            ${escapeHTML(message.text)}
+
+        </span>
+
+        <span class="message-time">
+
+            ${formatTime(message.createdAt || message.sentAt)}
+
+        </span>
+
+
+        ${
+            message.senderId === currentUser.uid
+
+                ? `
+
+                <span class="message-status ${tickClass}">
+
+                    ${tick}
+
+                </span>
+
+                `
+
+                : ""
+
+        }
+
+    </div>
+
+`;
+
+                messagesArea.appendChild(wrapper);
+
+
+            });
+
+
+            /*
+            =================================
+            UPDATE RECEIVED MESSAGES → READ
+            =================================
+            */
+
+
+            if (updatePromises.length > 0) {
+
+                await Promise.all(updatePromises);
+
+            }
+
+
+            messagesArea.scrollTop =
+
+                messagesArea.scrollHeight;
+
+
+        },
+
+
+        error => {
+
+
+            console.error(
+
+                "MESSAGE LISTENER ERROR:",
+
+                error
+
+            );
+
+
+            showNotification(
+
+                "Unable to load messages"
+
+            );
+
+        }
+
+    );
+
+}
+/* =========================================
+   SEND MESSAGE
+========================================= */
+
+$("sendMessageButton")
+
+    ?.addEventListener(
+
+        "click",
+
+        sendMessage
+
+    );
+
+
+$("messageInput")
+
+    ?.addEventListener(
+
+        "keydown",
+
+        event => {
+
+
+            if (
+
+                event.key === "Enter" &&
+
+                !event.shiftKey
+
+            ) {
+
+
+                event.preventDefault();
+
+
+                sendMessage();
+
+            }
+
+        }
+
+    );
+/* =========================================
+   TYPING STATUS
+========================================= */
+
+let typingTimer = null;
+
+
+$("messageInput")
+    ?.addEventListener(
+        "input",
+        async () => {
+
+            if (!selectedConversationId) return;
+
+
+            const conversationRef = doc(
+
+                db,
+
+                "conversations",
+
+                selectedConversationId
+
+            );
+
+
+            await setDoc(
+
+                conversationRef,
+
+                {
+
+                    typing: {
+
+                        [currentUser.uid]: true
+
+                    }
+
+                },
+
+                {
+
+                    merge: true
+
+                }
+
+            );
+
+
+            clearTimeout(typingTimer);
+
+
+            typingTimer = setTimeout(
+
+                async () => {
+
+                    await setDoc(
+
+                        conversationRef,
+
+                        {
+
+                            typing: {
+
+                                [currentUser.uid]: false
+
+                            }
+
+                        },
+
+                        {
+
+                            merge: true
+
+                        }
+
+                    );
+
+                },
+
+                1500
+
+            );
+
+        }
+
+    );
+
+async function sendMessage() {
+
+
+    if (
+
+        !selectedConversationId
+
+    ) {
+
+        showNotification(
+
+            "Please select a chat first"
+
+        );
+
+        return;
+
+    }
+
+
+    const input =
+
+        $("messageInput");
+
+
+    const text =
+
+        input?.value.trim();
+
+
+    if (!text) return;
+
+
+    try {
+
+
+        const messagesRef =
+
+            collection(
+
+                db,
+
+                "conversations",
+
+                selectedConversationId,
+
+                "messages"
+
+            );
+
+
+        await addDoc(
+
+            messagesRef,
+
+            {
+
+
+                text: text,
+
+
+                senderId:
+
+                    currentUser.uid,
+
+
+                senderEmail:
+
+                    currentUser.email,
+
+
+              createdAt: serverTimestamp(),
+sentAt: new Date().toISOString(),
+status: "sent"
+
+            }
+
+        );
+        $("sendSound")
+    ?.play()
+    .catch(() => {});
+
+
+        const conversationRef = doc(
+
+    db,
+
+    "conversations",
+
+    selectedConversationId
+
+);
+
+
+const conversationSnap =
+
+    await getDoc(conversationRef);
+
+
+const conversationData =
+
+    conversationSnap.data();
+
+
+const receiverUid =
+
+    conversationData.members.find(
+
+        uid => uid !== currentUser.uid
+
+    );
+
+
+const currentUnreadCount =
+
+    conversationData.unreadCount?.[receiverUid] || 0;
+
+
+await setDoc(
+
+    conversationRef,
+
+    {
+
+        lastMessage: text,
+
+        lastMessageSender:
+
+            currentUser.uid,
+
+        lastMessageAt:
+
+            serverTimestamp(),
+
+      unreadCount: {
+
+    [receiverUid]:
+
+        currentUnreadCount + 1
+
+}
+
+    },
+
+    {
+
+        merge: true
+
+    }
+
+);
+input.value="";
+clearTimeout(typingTimer);
+await setDoc(
+
+    doc(
+
+        db,
+
+        "conversations",
+
+        selectedConversationId
+
+    ),
+
+    {
+
+        typing: {
+
+            [currentUser.uid]: false
+
+        }
+
+    },
+
+    {
+
+        merge: true
+
+    }
+
+);
+}
+
+
+
+    catch (error) {
+
+
+        console.error(error);
+
+
+        showNotification(
+
+            error.message
+
+        );
+
+    }
+
+}
+
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+$("backToChatsButton")
+
+    ?.addEventListener(
+
+        "click",
+
+        () => {
+
+
+            $("chatWindow")
+
+                ?.classList.remove(
+
+                    "show"
+
+                );
+
+
+            selectedConversationId =
+
+                null;
+
+
+            selectedUser =
+
+                null;
+
+
+            if (
+
+                unsubscribeMessages
+
+            ) {
+
+
+                unsubscribeMessages();
+
+
+                unsubscribeMessages =
+
+                    null;
+
+            }
+
+        }
+
+    );
+
+
+/* =========================================
+   MENU
+========================================= */
+
+$("menuButton")
+
+    ?.addEventListener(
+
+        "click",
+
+        () => {
+
+
+            $("headerMenu")
+
+                ?.classList.toggle(
+
+                    "show"
+
+                );
+
+        }
+
+    );
+
+
+/* =========================================
+   PROFILE
+=======*/
+/* =========================================
+   PROFILE
+========================================= */
+
+$("profileBtn")?.addEventListener(
+    "click",
+    () => {
+
+        $("profileModal")?.classList.add("show");
+
+        $("headerMenu")?.classList.remove("show");
+
+    }
+);
+
+
+$("closeProfileModal")?.addEventListener(
+    "click",
+    () => {
+
+        $("profileModal")?.classList.remove("show");
+
+    }
+);
+
+
+/* =========================================
+   SETTINGS
+========================================= */
+
+$("settingsBtn")?.addEventListener(
+    "click",
+    () => {
+
+        $("settingsModal")?.classList.add("show");
+
+        $("headerMenu")?.classList.remove("show");
+
+    }
+);
+
+
+$("closeSettingsModal")?.addEventListener(
+    "click",
+    () => {
+
+        $("settingsModal")?.classList.remove("show");
+
+    }
+);
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+$("logoutBtn")?.addEventListener(
+    "click",
+    async () => {
+
+        try {
+
+            await signOut(auth);
+
+            window.location.href = "index.html";
+
+        }
+
+        catch (error) {
+
+            console.error(error);
+
+            showNotification(
+                "Logout failed"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   DARK / LIGHT MODE
+========================================= */
+
+const savedTheme =
+    localStorage.getItem("chatly-theme");
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark-mode");
+
+    if ($("themeIcon")) {
+
+        $("themeIcon").textContent = "☀️";
+
+    }
+
+}
+
+
+$("themeToggleBtn")?.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle(
+            "dark-mode"
+        );
+
+
+        const isDark =
+            document.body.classList.contains(
+                "dark-mode"
+            );
+
+
+        localStorage.setItem(
+            "chatly-theme",
+            isDark ? "dark" : "light"
+        );
+
+
+        if ($("themeIcon")) {
+
+            $("themeIcon").textContent =
+                isDark ? "☀️" : "🌙";
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   CLOSE MODALS BY CLICKING OUTSIDE
+========================================= */
+
+document.addEventListener(
+    "click",
+    event => {
+
+
+        if (
+
+            event.target.classList.contains(
+                "modal-overlay"
+            )
+
+        ) {
+
+            event.target.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   SEARCH CHATS
+========================================= */
+
+$("chatSearchInput")?.addEventListener(
+    "input",
+    event => {
+
+        const searchText =
+            event.target.value.toLowerCase().trim();
+
+
+        const chatItems =
+            document.querySelectorAll(
+                ".chat-item"
+            );
+
+
+        chatItems.forEach(
+            item => {
+
+                const text =
+                    item.textContent.toLowerCase();
+
+
+                if (
+                    text.includes(searchText)
+                ) {
+
+                    item.style.display =
+                        "flex";
+
+                }
+
+                else {
+
+                    item.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* =========================================
+   EMOJI BUTTON
+========================================= */
+
+$("emojiButton")?.addEventListener(
+    "click",
+    () => {
+
+        const input =
+            $("messageInput");
+
+
+        if (!input) return;
+
+
+        input.value += " 😊";
+
+
+        input.focus();
+
+    }
+);
+
+
+/* =========================================
+   CHAT OPTIONS
+========================================= */
+
+$("conversationMenuButton")?.addEventListener(
+    "click",
+    () => {
+
+        $("chatOptionsMenu")
+            ?.classList.toggle("show");
+
+    }
+);
+
+
+/* =========================================
+   DELETE CURRENT CHAT
+========================================= */
+
+$("deleteChatButton")?.addEventListener(
+    "click",
+    async () => {
+
+
+        if (
+            !selectedConversationId
+        ) {
+
+            return;
+
+        }
+
+
+        if (
+            !confirm(
+                "Delete this conversation?"
+            )
+        ) {
+
+            return;
+
+        }
+
+
+        try {
+
+
+            await deleteDoc(
+
+                doc(
+
+                    db,
+
+                    "conversations",
+
+                    selectedConversationId
+
+                )
+
+            );
+
+
+            if (
+                unsubscribeMessages
+            ) {
+
+                unsubscribeMessages();
+
+                unsubscribeMessages =
+                    null;
+
+            }
+
+
+            selectedConversationId =
+                null;
+
+
+            selectedUser =
+                null;
+
+
+            $("chatWindow")
+                ?.classList.remove(
+                    "show"
+                );
+
+
+            $("chatOptionsMenu")
+                ?.classList.remove(
+                    "show"
+                );
+
+
+            showNotification(
+                "Chat deleted"
+            );
+
+
+            await loadChats();
+
+
+        }
+
+
+        catch (error) {
+
+
+            console.error(error);
+
+
+            showNotification(
+                error.message
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   CLOSE DROPDOWN WHEN CLICKING OUTSIDE
+========================================= */
+
+document.addEventListener(
+    "click",
+    event => {
+
+
+        const menu =
+            $("headerMenu");
+
+
+        const menuButton =
+            $("menuButton");
+
+
+        if (
+
+            menu &&
+
+            menuButton &&
+
+            !menu.contains(event.target) &&
+
+            !menuButton.contains(event.target)
+
+        ) {
+
+            menu.classList.remove(
+                "show"
+            );
+
+        }
+
+
+        const chatOptions =
+            $("chatOptionsMenu");
+
+
+        const conversationMenu =
+            $("conversationMenuButton");
+
+
+        if (
+
+            chatOptions &&
+
+            conversationMenu &&
+
+            !chatOptions.contains(
+                event.target
+            ) &&
+
+            !conversationMenu.contains(
+                event.target
+            )
+
+        ) {
+
+            chatOptions.classList.remove(
+                "show"
+            );
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   ESC KEY
+========================================= */
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+
+        if (
+            event.key === "Escape"
+        ) {
+
+
+            document
+                .querySelectorAll(
+                    ".modal-overlay.show"
+                )
+                .forEach(
+                    modal => {
+
+                        modal.classList.remove(
+                            "show"
+                        );
+
+                    }
+                );
+
+
+            $("headerMenu")
+                ?.classList.remove(
+                    "show"
+                );
+
+
+            $("chatOptionsMenu")
+                ?.classList.remove(
+                    "show"
+                );
+
+        }
+
+    }
+);
+
+
+/* =========================================
+   WINDOW CLEANUP
+========================================= */
+
+window.addEventListener(
+    "beforeunload",
+    () => {
+
+        if (
+            unsubscribeMessages
+        ) {
+
+            unsubscribeMessages();
+
+        }
+
+    }
+);
+/* =========================================
+   SAVE PROFILE
+========================================= */
+
+$("saveProfileButton")
+    ?.addEventListener(
+
+        "click",
+
+        async () => {
+
+            const name =
+
+                $("editNameInput")
+                    ?.value
+                    .trim();
+
+
+            const bio =
+
+                $("editBioInput")
+                    ?.value
+                    .trim();
+
+
+            const imageFile =
+
+                $("editProfileImage")
+                    ?.files[0];
+
+
+            if (!name) {
+
+                showNotification(
+                    "Please enter your name"
+                );
+
+                return;
+
+            }
+
+
+            try {
+
+
+                let photoURL = null;
+
+
+                /* =========================
+                   UPLOAD PROFILE IMAGE
+                ========================= */
+
+                if (imageFile) {
+
+
+                    const imageRef = ref(
+
+                        storage,
+
+                        `profileImages/${currentUser.uid}`
+
+                    );
+
+
+                    await uploadBytes(
+
+                        imageRef,
+
+                        imageFile
+
+                    );
+
+
+                    photoURL =
+
+                        await getDownloadURL(
+
+                            imageRef
+
+                        );
+
+                }
+
+
+                /* =========================
+                   PROFILE DATA
+                ========================= */
+
+                const profileData = {
+
+                    name: name,
+
+                    bio: bio
+
+                };
+
+
+                if (photoURL) {
+
+                    profileData.photoURL =
+                        photoURL;
+
+                }
+
+
+                /* =========================
+                   SAVE FIRESTORE
+                ========================= */
+
+                await setDoc(
+
+                    doc(
+
+                        db,
+
+                        "users",
+
+                        currentUser.uid
+
+                    ),
+
+                    profileData,
+
+                    {
+
+                        merge: true
+
+                    }
+
+                );
+
+
+                /* =========================
+                   UPDATE SCREEN
+                ========================= */
+
+                await loadCurrentUser();
+
+
+                $("profileEditBox")
+                    ?.classList.remove(
+                        "show"
+                    );
+
+
+                showNotification(
+
+                    "Profile updated successfully"
+
+                );
+
+
+            }
+
+            catch (error) {
+
+                console.error(error);
+
+
+                showNotification(
+
+                    error.message
+
+                );
+
+            }
+
+        }
+
+    );
+    $("editProfileButton")
+    ?.addEventListener(
+
+        "click",
+
+        () => {
+
+            $("profileEditBox")
+                ?.classList.add("show");
+
+
+            $("editNameInput").value =
+
+                $("profileUserName")
+                    ?.textContent.trim();
+
+
+            $("editBioInput").value =
+
+                $("profileBio")
+                    ?.textContent.trim();
+
+        }
+
+    );
+/* =========================================
+   CHATLY SYSTEM READY
+========================================= */
+
+console.log(
+    "Chatly shared chat system is ready"
+);
+
+/* =========================================
+   PWA INSTALL
+========================================= */
+
+let deferredPrompt = null;
+
+window.addEventListener(
+    "beforeinstallprompt",
+    event => {
+
+        event.preventDefault();
+
+        deferredPrompt = event;
+
+        const installButton =
+            document.getElementById(
+                "installAppButton"
+            );
+
+        installButton
+            ?.classList.add("show");
+
+    }
+);
+
+document
+    .getElementById(
+        "installAppButton"
+    )
+    ?.addEventListener(
+
+        "click",
+
+        async () => {
+
+            if (!deferredPrompt) return;
+
+            deferredPrompt.prompt();
+
+            await deferredPrompt.userChoice;
+
+            deferredPrompt = null;
+
+            document
+                .getElementById(
+                    "installAppButton"
+                )
+                ?.classList.remove(
+                    "show"
+                );
+
+        }
+
+    );
+</script>
+<audio id="sendSound" preload="auto">
+    <source
+        src="https://assets.mixkit.co/active_storage/sfx/2358/2358-preview.mp3"
+        type="audio/mpeg">
+</audio>
+
+
+<audio
+    id="receiveSound"
+    preload="auto">
+
+    <source
+        src="https://assets.mixkit.co/active_storage/sfx/2354/2354-preview.mp3"
+        type="audio/mpeg">
+
+</audio>
+</body>
+</html>
