@@ -627,7 +627,8 @@ getAuth,
 createUserWithEmailAndPassword,
 signInWithEmailAndPassword,
 sendPasswordResetEmail,
-updateProfile
+updateProfile,
+ onAuthStateChanged
 }from"https://www.gstatic.com/firebasejs/12.16.0/firebase-auth.js";
 
 import{
@@ -662,6 +663,16 @@ measurementId:"G-G6GXDGFC1C"
 const app=initializeApp(firebaseConfig);
 
 const auth=getAuth(app);
+    onAuthStateChanged(auth, (user) => {
+
+    if (user) {
+
+        // User already logged in
+        window.location.href = "home.html";
+
+    }
+
+});
 
 const db=getFirestore(app);
 
